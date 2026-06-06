@@ -9,7 +9,7 @@ public class Course
     public string Categoria { get; set; } = null!;
     public int CargaHoraria { get; set; }
     public DateTime DataCricao { get; set; }
-
+    public bool IsDeleted { get; set; } = false;
     public ICollection<Enrollment> Enrollments {get; set; } = [];
 
 }

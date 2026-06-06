@@ -43,6 +43,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
 
+            b.Property(u => u.IsDeleted)
+                .IsRequired();
 
             b.HasMany(u => u.Enrollments)
                 .WithOne(r => r.Student)
@@ -74,12 +76,18 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             b.Property(u => u.CargaHoraria);
             
             b.Property(u => u.DataCricao);
+
+            b.Property(u => u.IsDeleted)
+                .IsRequired();
             
             b.HasMany(u => u.Enrollments)
                 .WithOne(r => r.Course)
                 .HasForeignKey(r => r.CourseId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
+
+            b.HasIndex(u => u.Categoria)
+                .HasDatabaseName("IX_Courses_Categoria");
 
         });
         modelBuilder.Entity<Enrollment>(b =>

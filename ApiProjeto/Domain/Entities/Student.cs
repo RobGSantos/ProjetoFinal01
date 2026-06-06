@@ -9,6 +9,7 @@ public class Student
     public DateTime DataCadatro { get; set; }
     public string ApplicationUserId { get; set; } = null!;
     public ApplicationUser ApplicationUser { get; set; } = null!;
+    public bool IsDeleted { get; set; } = false;
     public ICollection<Enrollment> Enrollments {get; set; } = [];
 
 }
