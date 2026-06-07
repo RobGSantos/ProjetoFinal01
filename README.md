@@ -1,5 +1,10 @@
 # ProjetoFinal01
 
+PROJETO PAUSADO TEMPORARIAMENTE.
+Motivo: revisar conteúdos prévios do nível 1 antes de continuar com EF Core, Identity e JWT
+Último estado: build funcionando com configuração inicial de EF Core, SQLite, Identity e JWT.
+
+
 ## Objetivo do projeto
 
 API Web desenvolvida em ASP.NET Core para estudo, com foco em gerenciamento de cursos, estudantes, autenticação e matrículas.
